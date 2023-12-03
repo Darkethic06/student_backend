@@ -1,0 +1,12 @@
+dev-deployment:
+ variables:
+   GIT_STRATEGY: fetch
+ script:
+   - bash ~/gitlab/deploy-laravel2.sh
+ environment:
+     name: Development
+     url : https://laravel-9-setup.dedicateddevelopers.us
+ tags:
+   - custom-laravel
+ only:
+   - dev
